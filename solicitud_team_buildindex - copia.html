@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solicitud Team Build</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #181828;
+      padding: 24px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    p {
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+    input, textarea, select {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+    textarea {
+      resize: none;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: #5a6cff;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #6f7fff;
+    }
+    .footer {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Team Build</h1>
+    <p>Solicitud para unirse al equipo de construcción del mapa</p>
+
+    <form action="mailto:nadamasdelmundo@gmail.com" method="POST" enctype="text/plain">
+      <label>Nombre de Roblox</label>
+      <input type="text" placeholder="Ej: BuilderPro123" required />
+
+      <label>Edad</label>
+      <input type="number" placeholder="Ej: 14" required />
+
+      <label>Experiencia en Build Mode</label>
+      <select required>
+        <option value="">Selecciona una opción</option>
+        <option>Básica</option>
+        <option>Intermedia</option>
+        <option>Avanzada</option>
+      </select>
+
+      <label>¿Qué sabes construir?</label>
+      <textarea rows="3" placeholder="Mapas, trampas, decoraciones, scripts simples..."></textarea>
+
+      <label>¿Por qué quieres unirte?</label>
+      <textarea rows="3" placeholder="Cuéntanos tu motivación"></textarea>
+
+      <button type="submit">Enviar Solicitud</button>
+      
+          <div id="mensaje" style="display:none; margin-top:14px; text-align:center; color:#7cff9a; font-size:14px;">Solicitud enviada, pronto te responderemos.</div>
+    </form>
+
+    <script>
+      const form = document.querySelector('form');
+      const mensaje = document.getElementById('mensaje');
+      form.addEventListener('submit', () => {
+        mensaje.style.display = 'block';
+      });
+    </script>
+
+    <div class="footer">© DreamMaps Studio</div>
+  </div>
+</body>
+</html>
